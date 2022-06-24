@@ -1,0 +1,58 @@
+
+android {
+    compileSdkVersion 32
+    defaultConfig {
+        minSdkVersion 24
+        targetSdkVersion 32
+
+        vectorDrawables.useSupportLibrary = true
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            buildConfigField 'String', 'RETROFIT_LEVEL', '"NONE"'
+            buildConfigField 'String', 'API_POKEMON', '"https://pokeapi.co/api/v2/"'
+            buildConfigField 'String', 'API_RESOURCES_IMAGES', '"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"'
+
+
+        }
+        debug{
+            buildConfigField 'String', 'RETROFIT_LEVEL', '"NONE"'
+            buildConfigField 'String', 'API_POKEMON', '"https://pokeapi.co/api/v2/"'
+            buildConfigField 'String', 'API_RESOURCES_IMAGES', '"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"'
+
+
+        }
+        qas{
+            buildConfigField 'String', 'RETROFIT_LEVEL', '"NONE"'
+            buildConfigField 'String', 'API_POKEMON', '"https://pokeapi.co/api/v2/"'
+            buildConfigField 'String', 'API_RESOURCES_IMAGES', '"https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/"'
+
+
+
+        }
+
+    }
+
+    compileOptions {
+        coreLibraryDesugaringEnabled true
+        sourceCompatibility = JavaVersion.VERSION_1_8
+        targetCompatibility = JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = JavaVersion.VERSION_1_8
+    }
+    buildFeatures {
+        viewBinding true
+    }
+
+
+    dependencies {
+        coreLibraryDesugaring 'com.android.tools:desugar_jdk_libs:1.1.5'
+        implementation "androidx.core:core-ktx:1.8.0"
+        implementation "org.jetbrains.kotlin:kotlin-stdlib-jdk8"
+        
+
+    }
+}
+
