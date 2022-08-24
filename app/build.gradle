@@ -39,7 +39,7 @@ android {
         }
     }
     ext{
-        APP_NAME="DEMO BAUBAP"
+        APP_NAME="DEMO Pokemon"
     }
     buildscript {
         android.applicationVariants.all { variant ->
